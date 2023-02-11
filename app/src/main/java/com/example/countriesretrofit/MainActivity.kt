@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding.searchButton.setOnClickListener{
             val countryName = binding.countryNameEt.text.toString()
 
-            val countries = restCountriesService.getCountryByName(countryName)
+            val countries = restCountriesService.getCountryByName(countryName).execute().body()!!
             val country = countries[0]
 
             binding.countryName.text = country.name
