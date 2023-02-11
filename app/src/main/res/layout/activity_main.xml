@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/countryName_et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -18,12 +18,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Find"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toEndOf="@+id/countryName_et"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -33,11 +33,11 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/countryName_et"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/countryName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -46,7 +46,7 @@
         android:textStyle="bold"
         android:textSize="25dp"
         app:layout_constraintStart_toEndOf="@+id/flag"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/countryName_et" />
 
     <TextView
         android:id="@+id/сapital"
@@ -57,7 +57,7 @@
         android:text="@string/capital"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/flag"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/countryName" />
 
     <TextView
         android:id="@+id/capital_tv"
@@ -91,12 +91,12 @@
 
 
     <TextView
-        android:id="@+id/square"
+        android:id="@+id/area"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
-        android:text="@string/square"
+        android:text="@string/area"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/population" />
@@ -120,7 +120,7 @@
         android:text="@string/languages"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/square" />
+        app:layout_constraintTop_toBottomOf="@+id/area" />
 
     <TextView
         android:id="@+id/square_tv"
@@ -129,6 +129,6 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/square"
+        app:layout_constraintStart_toEndOf="@+id/area"
         app:layout_constraintTop_toBottomOf="@+id/population_tv" />
 </androidx.constraintlayout.widget.ConstraintLayout>

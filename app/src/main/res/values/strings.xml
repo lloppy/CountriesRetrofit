@@ -2,6 +2,6 @@
     <string name="app_name">CountriesRetrofit</string>
     <string name="population">Population:</string>
     <string name="languages">Languages:</string>
-    <string name="square">Square:</string>
+    <string name="area">Area:</string>
     <string name="capital">Capital:</string>
 </resources>
