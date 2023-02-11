@@ -2,7 +2,9 @@ package com.example.countriesretrofit
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.lifecycleScope
 import com.example.countriesretrofit.databinding.ActivityMainBinding
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -15,15 +17,16 @@ class MainActivity : AppCompatActivity() {
         binding.searchButton.setOnClickListener{
             val countryName = binding.countryNameEt.text.toString()
 
-            val countries = restCountriesService.getCountryByName(countryName).execute().body()!!
-            val country = countries[0]
+            lifecycleScope.launch{
+                val countries = restCountriesService.getCountryByName(countryName)
+                val country = countries[0]
 
-            binding.countryName.text = country.name
-            binding.capitalTv.text = country.capital
-            binding.populationTv.text = country.population.toString()
-            binding.area.text = country.area.toString()
-            binding.languages.text = country.languages.toString()
-
+                binding.countryName.text = country.name
+                binding.capitalTv.text = country.capital
+                binding.populationTv.text = country.population.toString()
+                binding.area.text = country.area.toString()
+                binding.languages.text = country.languages.toString()
+            }
         }
     }
 }
